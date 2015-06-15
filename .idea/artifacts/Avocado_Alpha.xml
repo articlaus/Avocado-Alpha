@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Avocado-Alpha">
+    <output-path>$PROJECT_DIR$/out/artifacts/Avocado_Alpha</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Avocado-Alpha/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Avocado-Alpha" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="zcommon" />
+          <element id="library" level="project" name="zuljsp" />
+          <element id="library" level="project" name="zk-angular" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

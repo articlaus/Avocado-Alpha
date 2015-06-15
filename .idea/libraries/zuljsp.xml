@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="zuljsp">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/archives/zuljsp.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
