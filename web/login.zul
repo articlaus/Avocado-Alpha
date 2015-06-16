@@ -26,7 +26,7 @@
 <zk xmlns="http://www.zkoss.org/2005/zul" xmlns:n="native">
 
     <panel apply="org.zkoss.bind.BindComposer" height="100%" width="100%"
-           viewModel="@id('log') @init('com.LoginController')">
+           viewModel="@id('log') @init('com.controllers.LoginController')">
         <panelchildren>
 
 

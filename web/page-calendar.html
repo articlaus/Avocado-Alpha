@@ -44,7 +44,7 @@
   <!-- WeatherIcons -->
   <link rel="stylesheet" type="text/css" href="assets/weatherIcons/css/weather-icons.min.css" />
 
-  <!-- Full Calendar -->
+  <!-- Full ca -->
   <link rel="stylesheet" type="text/css" href="assets/fullcalendar/fullcalendar.min.css" />
   <!-- Main -->
   <link rel="stylesheet" type="text/css" href="assets/_con/css/_con.min.css" />
@@ -437,7 +437,8 @@
           <p class="switch">
             <label>
               <input type="checkbox" name="remove-draggable" />
-              <span class="lever"></span>Remove After Drop
+              <span class="lever"></span>
+Remove After Drop
             </label>
           </p>
 
@@ -859,23 +860,7 @@
     /*
      * Init Calendar
      */
-    $('#calendar').fullCalendar({
-      height: 700,
-      header: {
-        left: 'prev,next today',
-        center: 'title',
-        right: 'month,agendaWeek,agendaDay'
-      },
-      defaultDate: '2015-02-12',
-      editable: true,
-      droppable: true,
-      drop: function() {
-        // is the "remove after drop" checkbox checked?
-        if (removeDraggable.is(':checked')) {
-          // if so, remove the element from the "Draggable Events" list
-          $(this).remove();
-        }
-      },
+    $('#calendar').fullCalendar({height: 700,header: {left: 'prev,next today', center: 'title',right: 'month,agendaWeek,agendaDay'},defaultDate: '2015-02-12',editable: true,droppable: true,drop: function() {if (removeDraggable.is(':checked')) { $(this).remove();}},
       events: [
         {
           title: 'All Day Event',

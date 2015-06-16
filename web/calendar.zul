@@ -1,0 +1,34 @@
+<!-- nanoScroller -->
+<?link rel="stylesheet" type="text/css" href="assets/nanoScroller/nanoscroller.css"?>
+
+
+<!-- FontAwesome -->
+<?link rel="stylesheet" type="text/css" href="assets/font-awesome/css/font-awesome.min.css"?>
+
+<!-- Material Design Icons -->
+<?link rel="stylesheet" type="text/css" href="assets/material-design-icons/css/material-design-icons.min.css"?>
+
+<!-- IonIcons -->
+<?link rel="stylesheet" type="text/css" href="assets/ionicons/css/ionicons.min.css"?>
+<!-- Full Calendar -->
+<?link rel="stylesheet" type="text/css" href="assets/fullcalendar/fullcalendar.min.css"?>
+<!-- WeatherIcons -->
+<?link rel="stylesheet" type="text/css" href="assets/weatherIcons/css/weather-icons.min.css"?>
+<!-- Main -->
+<?link rel="stylesheet" type="text/css" href="assets/_con/css/_con.min.css"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul" xmlns:n="native">
+    <panel id="calendarPanel" apply="org.zkoss.bind.BindComposer"
+           viewModel="@id('cp') @init('com.controllers.CalendarController')">
+        <panelchildren>
+            <n:div class="col s12 l12">
+                <!-- Calendar -->
+                <n:div class="card">
+                    <n:div id="calendar"></n:div>
+                </n:div>
+                <!-- /Calendar -->
+            </n:div>
+
+        </panelchildren>
+    </panel>
+</zk>

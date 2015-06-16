@@ -59,7 +59,7 @@ Copyright 2015.
 <body>
 <z:page id="indexPage">
     <z:panel id="indexPagePanel" apply="org.zkoss.bind.BindComposer"
-             viewModel="@id('idp') @init('com.controllers.IndexPageController')">
+             viewModel="@id('idp') @init('com.controllers.CalendarController')">
         <z:panelchildren>
             <!--
             Top Navbar
@@ -71,13 +71,13 @@ Copyright 2015.
             <nav class="navbar-top">
                 <div class="nav-wrapper">
 
-                        <%--<!-- Sidebar toggle -->--%>
-                        <%--<a href="#" class="yay-toggle">--%>
+                    <%--<!-- Sidebar toggle -->--%>
+                    <%--<a href="#" class="yay-toggle">--%>
                         <%--<div class="burg1"></div>--%>
                         <%--<div class="burg2"></div>--%>
                         <%--<div class="burg3"></div>--%>
-                        <%--</a>--%>
-                        <%--<!-- Sidebar toggle -->--%>
+                    <%--</a>--%>
+                    <%--<!-- Sidebar toggle -->--%>
 
                     <!-- Logo -->
                     <a href="#!" class="brand-logo">
@@ -157,10 +157,10 @@ Copyright 2015.
                         <ul>
                             <li class="label">Ажилтанууд</li>
                             <li>
-                                <z:a zclass="yay-sub-toggle waves-effect waves-blue"
-                                     onClick="@command('employeeList')">
-                                    Жагсаалт
-                                </z:a>
+                                    <z:a zclass="yay-sub-toggle waves-effect waves-blue"
+                                         onClick="@command('employeeList')">
+                                        Жагсаалт
+                                    </z:a>
                             </li>
 
 
@@ -197,7 +197,6 @@ Copyright 2015.
             <!-- /Yay Sidebar -->
 
 
-
             <!-- Main Content -->
             <section class="content-wrap">
 
@@ -219,9 +218,14 @@ Copyright 2015.
                 <!-- /Breadcrumb -->
 
                 <div class="row">
-                    <!-- Include -->
-                    <z:include id="mainInclude" src="calendar.zul"/>
-                    <!-- /Include -->
+
+                    <div class="col s12 l12">
+                        <!-- Calendar -->
+                        <div class="card">
+                            <div id="calendar"></div>
+                        </div>
+                        <!-- /Calendar -->
+                    </div>
                 </div>
 
             </section>
@@ -628,6 +632,29 @@ Copyright 2015.
         </z:panelchildren>
     </z:panel>
 </z:page>
+
+<!-- jQuery -->
+<script type="text/javascript" src="assets/jquery/jquery.min.js"></script>
+
+<!-- jQuery RAF (improved animation performance) -->
+<script type="text/javascript" src="assets/jqueryRAF/jquery.requestAnimationFrame.min.js"></script>
+
+<!-- nanoScroller -->
+<script type="text/javascript" src="assets/nanoScroller/jquery.nanoscroller.min.js"></script>
+
+<!-- Materialize -->
+<script type="text/javascript" src="assets/materialize/js/materialize.min.js"></script>
+
+<!-- Full Calendar -->
+<script type="text/javascript" src="assets/fullcalendar/moment.min.js"></script>
+<script type="text/javascript" src="assets/fullcalendar/jquery-ui.custom.min.js"></script>
+<script type="text/javascript" src="assets/fullcalendar/fullcalendar.min.js"></script>
+
+<!-- Sortable -->
+<script type="text/javascript" src="assets/sortable/Sortable.min.js"></script>
+
+<!-- Main -->
+<script type="text/javascript" src="assets/_con/js/_con.min.js"></script>
 
 </body>
 
