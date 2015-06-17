@@ -30,7 +30,12 @@ public class CalendarController {
 
     @Command
     public void employeeList() {
-        Executions.sendRedirect("index.jsp");
+        Executions.sendRedirect("employeeList.jsp");
+    }
+
+    @Command
+    public void testString(){
+        System.out.println("Hello World!");
     }
 
     public void initCalendar() {

@@ -27,5 +27,6 @@
     <orderEntry type="library" name="zk-angular" level="project" />
     <orderEntry type="library" name="JAX-WS-Glassfish / JAX-WS 2.2 RI / Metro 1.X / JWSDP 2.2" level="project" />
     <orderEntry type="library" name="calendar" level="project" />
+    <orderEntry type="library" name="javax.servlet.jsp.jstl-api-1.2.1" level="project" />
   </component>
 </module>

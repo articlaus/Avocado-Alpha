@@ -58,15 +58,11 @@ Copyright 2015.
 
 <body>
 <z:page id="indexPage">
-    <z:panel id="indexPagePanel" apply="org.zkoss.bind.BindComposer"
-             viewModel="@id('idp') @init('com.controllers.CalendarController')">
+    <z:panel id="employeeListPanel" apply="org.zkoss.bind.BindComposer"
+             viewModel="@id('elp') @init('com.controllers.EmployeeListPanelController')">
         <z:panelchildren>
             <!--
             Top Navbar
-            Options:
-            .navbar-dark - dark color scheme
-            .navbar-static - static navbar
-            .navbar-under - under sidebar
             -->
             <nav class="navbar-top">
                 <div class="nav-wrapper">
@@ -111,17 +107,6 @@ Copyright 2015.
 
             <!--
             Yay Sidebar
-            Options [you can use all of theme classnames]:
-            .yay-hide-to-small - no hide menu, just set it small with big icons
-            .yay-static - stop using fixed sidebar (will scroll with content)
-            .yay-gestures - to show and hide menu using gesture swipes
-            .yay-light - light color scheme
-            .yay-hide-on-content-click - hide menu on content click
-
-            Effects [you can use one of these classnames]:
-            .yay-overlay - overlay content
-            .yay-push - push content to right
-            .yay-shrink - shrink content width
             -->
             <aside class="yaybar yay-shrink yay-hide-to-small yay-gestures">
 
@@ -208,11 +193,38 @@ Copyright 2015.
                 <div class="row">
 
                     <div class="col s12 l12">
-                        <!-- Calendar -->
+                        <!-- Employee Table -->
                         <div class="card">
-                            <div id="calendar"></div>
+
+                                <%--<z:grid zclass="none" sclass="table table-bordered table-hover"--%>
+                                <%--model="@bind(elp.datas)">--%>
+                                <%--<z:columns>--%>
+                                <%--<z:column label="name" zclass="none" sclass="table table-bordered table-hover"/>--%>
+                                <%--<z:column label="name" zclass="none" sclass="table table-bordered table-hover"/>--%>
+                                <%--</z:columns>--%>
+                                <%--<z:rows zclass="none" sclass="table table-bordered table-hover">--%>
+                                <%--<z:template name="model" zclass="none">--%>
+                                <%--<z:row zclass="none" sclass="table table-bordered table-hover">--%>
+                                <%--<z:label value="@load(each)"/>--%>
+                                <%--<z:label value="@load(each)"/>--%>
+                                <%--</z:row>--%>
+                                <%--</z:template>--%>
+                                <%--</z:rows>--%>
+                                <%--</z:grid>--%>
+
+
+                            <table id="table1" class="display table table-bordered table-striped table-hover">
+                                <thead>
+                                <tr>
+                                    <th>Name</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <z:html id="htmlTag"/>
+                                </tbody>
+                            </table>
                         </div>
-                        <!-- /Calendar -->
+                        <!-- / Employee Table  -->
                     </div>
                 </div>
 
